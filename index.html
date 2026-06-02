@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maturski 2026 — Elektrotehničar računara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-title">
+        <h1>Maturski 2026</h1>
+        <span class="header-sub">Elektrotehničar računara</span>
+      </div>
+      <div class="header-progress">
+        <div class="progress-label">
+          <span id="progress-text">Naučeno: 0/251</span>
+          <span id="progress-pct">0%</span>
+        </div>
+        <div class="progress-bar-outer">
+          <div class="progress-bar-inner" id="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="home-panel" aria-label="Pregled napretka">
+      <div class="home-copy">
+        <p class="eyebrow">Maturska priprema</p>
+        <h2 id="view-title">Početna</h2>
+        <p id="view-subtitle">Pregled napretka kroz sva pitanja.</p>
+        <div class="hero-actions">
+          <span class="hero-pill"><span id="stat-total">251</span> pitanja</span>
+          <span class="hero-pill"><span id="stat-known">0</span> naučeno</span>
+          <span class="hero-pill"><span id="stat-unknown">0</span> za vežbu</span>
+          <span class="hero-pill"><span id="stat-left">251</span> novo</span>
+        </div>
+        <button class="btn-exam-start" id="btn-exam-start" type="button">Maturski mod</button>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 220 180" role="img">
+          <defs>
+            <linearGradient id="heroGrad" x1="20" y1="10" x2="190" y2="170" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#7CC7FF"/>
+              <stop offset="0.55" stop-color="#9A8CFF"/>
+              <stop offset="1" stop-color="#62E0A8"/>
+            </linearGradient>
+            <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.4 0 0 0 0 0.75 0 0 0 0 1 0 0 0 .45 0"/>
+              <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <path d="M34 142c20 18 70 25 112 12 42-12 64-43 49-82C181 34 137 16 91 25 45 35 9 65 15 102c2 15 8 29 19 40Z" fill="rgba(124,199,255,.10)"/>
+          <circle cx="68" cy="65" r="28" fill="rgba(124,199,255,.14)" stroke="rgba(124,199,255,.38)"/>
+          <path d="M54 62h29M54 72h20M54 52h17" stroke="#BFE7FF" stroke-width="5" stroke-linecap="round"/>
+          <rect x="102" y="45" width="68" height="90" rx="16" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)"/>
+          <path d="M119 70h33M119 88h24M119 106h38" stroke="#D8E6FF" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="162" cy="126" r="28" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>
+          <circle id="hero-ring" cx="162" cy="126" r="28" fill="none" stroke="url(#heroGrad)" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100" filter="url(#softGlow)" transform="rotate(-90 162 126)"/>
+          <path d="M155 125l6 6 13-17" fill="none" stroke="#CFFFE8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="subject-overview" id="subject-overview" aria-label="Predmeti"></section>
+
+    <section class="exam-panel" id="exam-panel" hidden>
+      <div>
+        <p class="eyebrow">Simulacija testa</p>
+        <h3>Maturski mod</h3>
+        <p id="exam-summary">50 pitanja, ukupno 100 bodova. Nema negativnih bodova.</p>
+      </div>
+      <div class="exam-actions">
+        <button class="btn-reset" id="btn-exam-new" type="button">Nova kombinacija</button>
+        <button class="btn-reset" id="btn-exam-exit" type="button">Izađi</button>
+        <button class="btn-test-mode" id="btn-exam-submit" type="button">Završi test</button>
+      </div>
+      <div class="exam-result" id="exam-result" hidden></div>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true"></span>
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Pretraži pitanja..."
+          autocomplete="off"
+        />
+        <button class="search-clear" id="search-clear" aria-label="Obriši pretragu">x</button>
+      </div>
+      <div class="filters">
+        <div class="filter-group filter-subject-group">
+          <label class="filter-label">Predmet</label>
+          <select id="filter-subject" class="filter-select">
+            <option value="">Svi predmeti</option>
+            <option value="hardver">Hardver</option>
+            <option value="operativni_sistemi">Op. sistemi</option>
+            <option value="odrzavanje">Održavanje</option>
+            <option value="tehnicka_dokumentacija">Teh. dokumentacija</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Status</label>
+          <select id="filter-status" class="filter-select">
+            <option value="">Sva pitanja</option>
+            <option value="znam">✓ Znam</option>
+            <option value="ne_znam">Za vežbu</option>
+            <option value="neoznaceno">Novo</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Bodovi</label>
+          <select id="filter-bodovi" class="filter-select">
+            <option value="">Svi</option>
+            <option value="1">1 bod</option>
+            <option value="2">2 boda</option>
+            <option value="3">3 boda</option>
+          </select>
+        </div>
+        <button class="btn-reset" id="btn-reset">Resetuj filtere</button>
+        <button class="btn-test-mode" id="btn-test-mode"><span class="test-dot"></span> Test mod</button>
+      </div>
+      <div class="results-count" id="results-count"></div>
+    </section>
+
+    <!-- Questions list -->
+    <section class="questions-list" id="questions-list">
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <span>Učitavam pitanja...</span>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="exam-confirm" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="exam-confirm-title">
+      <p class="eyebrow">Maturski mod</p>
+      <h2 id="exam-confirm-title">Započni simulaciju testa?</h2>
+      <p>Biće izvučeno 50 nasumičnih pitanja sa ukupno 100 bodova. Tokom testa se ne prikazuju tačni odgovori ni objašnjenja.</p>
+      <div class="modal-actions">
+        <button class="btn-reset" id="btn-exam-cancel" type="button">Odustani</button>
+        <button class="btn-test-mode" id="btn-exam-confirm" type="button">Započni test</button>
+      </div>
+    </section>
+  </div>
+
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navigacija po predmetima">
+    <button class="bottom-nav-item active" data-subject="">
+      <svg class="nav-icon nav-all" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 5h5v5H5zM14 5h5v5h-5zM5 14h5v5H5zM14 14h5v5h-5z"/>
+      </svg>
+      <span>Home</span>
+      <small id="nav-count-all">251</small>
+    </button>
+    <button class="bottom-nav-item" data-subject="hardver">
+      <svg class="nav-icon nav-hardver" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="6" y="8" width="12" height="9" rx="2"/><path d="M9 5h6v3M8 20v-3M16 20v-3M3 11h3M18 11h3"/>
+      </svg>
+      <span>Hardver</span>
+      <small id="nav-count-hardver">51</small>
+    </button>
+    <button class="bottom-nav-item" data-subject="operativni_sistemi">
+      <svg class="nav-icon nav-os" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="5" width="16" height="11" rx="2"/><path d="M9 20h6M12 16v4M8 9h3M13 9h3"/>
+      </svg>
+      <span>OS</span>
+      <small id="nav-count-operativni_sistemi">100</small>
+    </button>
+    <button class="bottom-nav-item" data-subject="odrzavanje">
+      <svg class="nav-icon nav-odrzavanje" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15 5l4 4-6 6-4-4 6-6Z"/><path d="M10 14l-5 5M5 19l-1 1M14 10l4 4"/>
+      </svg>
+      <span>Održavanje</span>
+      <small id="nav-count-odrzavanje">50</small>
+    </button>
+    <button class="bottom-nav-item" data-subject="tehnicka_dokumentacija">
+      <svg class="nav-icon nav-dokumentacija" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h4M10 12h5M10 16h5"/>
+      </svg>
+      <span>Dok.</span>
+      <small id="nav-count-tehnicka_dokumentacija">50</small>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

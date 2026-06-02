@@ -1,0 +1,16 @@
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Local logs
+*.log
+*.err.log
+
+# Local design/skill references not needed for deploy
+skills/
+
+# Large local source file (keep local)
+Elektrotehnicar-racunara-MI-Prirucnik-2024-2.pdf
