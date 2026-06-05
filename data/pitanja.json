@@ -353,8 +353,8 @@
       "јединица мора да буде исте или мање снаге",
       "локација конектора за напајање мора бити иста"
     ],
-    "tacan_odgovor": "локација конектора за напајање мора бити иста",
-    "objasnjenje": "Када се замењује напајање у рек орману, физичке димензије и положај конектора морају одговарати оригиналном јединици јер је простор у раку строго одређен и каблови су фиксно уведени. Ако конектори нису на истим местима, напајање неће моћи правилно да се прикључи на матичну плочу и остале компоненте без преуређивања целог каблирања. Остале опције су нетачне: напон је стандардизован и аутоматски се бира на модерним напајањима, вентилатор је неопходан у рек окружењу, а снага замене мора бити иста или већа — никако мања.",
+    "tacan_odgovor": "изаберете одговарајући напон",
+    "objasnjenje": "При замени напајања у рек орману, кључно је изабрати одговарајући напон (110V или 230V) у складу са електричном инфраструктуром. Погрешан напон може оштетити уређај или изазвати квар. Локација конектора је важна али секундарна — модерни рек оквири имају стандардизоване позиције. Напајање без вентилатора није погодно за рек окружење јер нема активног хлађења, а замена мора бити исте или веће снаге, не мање.",
     "has_image": false,
     "ai_generated": true
   },
@@ -410,8 +410,9 @@
     ],
     "tacan_odgovor": "Рачунар има два меморијска модула, сваки по 4 GB",
     "objasnjenje": "CPU-Z prikazuje ukupno 8 GB memorije raspoređene u dva modula. Zato je tačno da računar ima dva memorijska modula, svaki po 4 GB.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q23.png"
   },
   {
     "id": 24,
@@ -426,10 +427,11 @@
       "Рачунар има два меморијска слота и у један од њих уместо постојећег модула треба убацити модул од 4 GB",
       "Рачунар има два меморијска слота и у један од њих уместо постојећег модула треба убацити модул од 8 GB"
     ],
-    "tacan_odgovor": "Рачунар има два меморијска слота и у један од њих уместо постојећег модула треба убацити модул од 4 GB",
-    "objasnjenje": "Pošto računar ima dva memorijska slota i cilj je ukupno 12 GB RAM-a, jedan postojeći modul treba zameniti modulom od 4 GB. Kombinacije sa 6 GB ili jednim modulom od 12 GB nisu standardno rešenje.",
-    "has_image": false,
-    "ai_generated": true
+    "tacan_odgovor": "Рачунар има два меморијска слота и у један од њих уместо постојећег модула треба убацити модул од 8 GB",
+    "objasnjenje": "Да би рачунар имао 12 GB RAM-а, потребно је имати два слота: у један убацити нови модул од 8 GB, а у другом оставити постојећи модул од 4 GB (8+4=12 GB). Опција са два модула по 6 GB је неправилна јер 6 GB DIMM-ови нису стандардни. Опција са 12 GB у једном слоту такође није стандардна вредност.",
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q24.png"
   },
   {
     "id": 25,
@@ -669,9 +671,9 @@
       "Обрађује податке аритметички",
       "Управљање читањем и уписом у оперативну меморију",
       "Управљање извршним инструкцијама RAM меморије",
-      "Управљање радом аритеметичко-логичке јединице",
+      "Управљање радом аритметичко-логичке јединице",
       "Саопштава околини резултате добијене извршењем програма",
-      "Управљање разменом информација између оперативне меморије и аритемтичко- логичке јединице"
+      "Управљање разменом информација између оперативне меморије и аритметичко-логичке јединице"
     ],
     "tacan_odgovor": [
       "Управљање читањем и уписом у оперативну меморију",
@@ -695,12 +697,12 @@
       "прочитати на кућишту рачунара информације о моделу матичне плоче.",
       "користећи карактеристике (properties), „This PC“ иконе на десктоп-у",
       "користећи неки од бесплатних програма попут CPU-Z.",
-      "у command prompt-у, унети команду: wmic baseboard get product, Manufacturer, version, serialnumber У следећим задацима уредите и повежите појмове према захтеву"
+      "у command prompt-у, унети команду: wmic baseboard get product, Manufacturer, version, serialnumber"
     ],
     "tacan_odgovor": [
       "у RUN, унети команду: msinfo32",
       "користећи неки од бесплатних програма попут CPU-Z.",
-      "у command prompt-у, унети команду: wmic baseboard get product, anufacturer, ersion, erialnumber"
+      "у command prompt-у, унети команду: wmic baseboard get product, Manufacturer, version, serialnumber"
     ],
     "objasnjenje": "Команда msinfo32 отвара System Information прозор који приказује детаље о матичној плочи (произвођач, модел)  Алат CPU-Z је бесплатни програм специјализован за приказ хардверских информација, укључујући тачан модел и произвођача матичне плоче. Команда wmic baseboard get product, anufacturer, ersion, erialnumber директно из командне линије враћа кључне податке о матичној плочи. Опције 1,3 и 4 нису поуздане методе — Windows Search не даје директно информације о матичној плочи, на кућишту обично нема те информације, а 'This PC' properties приказује само основне системске податке (RAM, процесор, Windows верзију)",
     "has_image": false,
@@ -734,8 +736,9 @@
     "opcije": [],
     "tacan_odgovor": "procesor - 2; VGA - 4; PCIexpress - 5; SATA konektori - 6; konektor za napajanje - 1; DVI - 3",
     "objasnjenje": "Na slici je procesorsko podnozje oznaceno brojem 2, VGA port brojem 4, PCI Express slot brojem 5, SATA konektori brojem 6, ATX konektor napajanja brojem 1, a DVI port brojem 3.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q39.png"
   },
   {
     "id": 40,
@@ -747,8 +750,9 @@
     "opcije": [],
     "tacan_odgovor": "DVI - 6; konektori za maticnu plocu - 5; VGA - 2; GPU sa hladnjakom - 3; HDMI - 4; VRAM - 1",
     "objasnjenje": "DVI je veliki beli konektor oznacen brojem 6, VGA je plavi konektor broj 2, HDMI je manji digitalni konektor broj 4, PCI-E konektor za maticnu plocu je broj 5, hladnjak prekriva GPU i oznacen je brojem 3, a memorijski cipovi su broj 1.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q40.png"
   },
   {
     "id": 41,
@@ -760,8 +764,9 @@
     "opcije": [],
     "tacan_odgovor": "Slot 1: modul 8 GB; Slot 2: modul 4 GB; Slot 3: modul 8 GB; Slot 4: modul 4 GB. Ukupno: 8 + 4 + 8 + 4 = 24 GB.",
     "objasnjenje": "Za dvokanalni režim slotovi 1 i 3 čine jedan kanal, a slotovi 2 i 4 drugi kanal. U isti kanal treba staviti module istog kapaciteta i frekvencije, pa raspored 8 GB + 8 GB u jednom kanalu i 4 GB + 4 GB u drugom daje ukupno 24 GB.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q41.png"
   },
   {
     "id": 42,
@@ -778,8 +783,9 @@
     ],
     "tacan_odgovor": "10 Gbps - 3; 3,938 GB/s (~4 GB) - 4; 7,877 GB/s (~8 GB) - X; 500 MB/s - 1; 5 Gbps - X; 600 MB/s - 2",
     "objasnjenje": "USB 3.2 Gen2 radi na 10 Gbps, PCI-E 3.0 sa četiri staze daje oko 3,938 GB/s, PCI-E 2.0 po jednoj stazi oko 500 MB/s, a SATA 3.0 oko 600 MB/s. Ponudjene brzine 7,877 GB/s i 5 Gbps ne odgovaraju navedenim standardima.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q42.png"
   },
   {
     "id": 43,
@@ -801,8 +807,9 @@
       "4 → Недавно инсталирани меморијски модул се не види"
     ],
     "objasnjenje": "Свако спаривање прати логику дијагнозе: прегревање указује на проблем са хлађењем па се прво проверавају вентилатори (1)  кликтање из кућишта може бити страно тело у вентилатору или хард диск у отказу (2)  упорно гашење уз исправно напајање сугерише квар у напајачу па се мери мултиметром (3)  меморијски модул који се не види најчешће није правилно утакнут у слот (4)",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q43.png"
   },
   {
     "id": 44,
@@ -837,8 +844,9 @@
     "opcije": [],
     "tacan_odgovor": "Kodiranje - 3; Kvantizacija - 2; Odmeravanje - 1",
     "objasnjenje": "A/D konverzija ide redom: odmeravanje signala, zatim kvantizacija izmerenih vrednosti, pa kodiranje u binarni oblik.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q45.png"
   },
   {
     "id": 46,
@@ -864,8 +872,9 @@
       "3 → Копира садржај активног прозора у Clipboard (Alt+Prtsc)"
     ],
     "objasnjenje": "Све комбинације у питању су тачно наведене, али су функције намерно измешане — задатак је спојити их исправно. Alt+Tab служи за пребацивање између отворених апликација, Windows+E отвара File Explorer, Windows+M минимизује све прозоре, Ctrl+X је Cut команда, Shift+Alt мења језик тастатуре, а Alt+PrtSc снима садржај активног (фокусираног) прозора у Clipboard за разлику од самог PrtSc који снима цео екран.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q46.png"
   },
   {
     "id": 47,
@@ -877,8 +886,9 @@
     "opcije": [],
     "tacan_odgovor": "Maticna ploca - X; Obavlja operacije koristeci instrukcije - 3; Operativna memorija - 4; Severni most - 1; Juzni most - 2",
     "objasnjenje": "Blok 3 je procesor jer izvrsava instrukcije. Blok 4 je operativna memorija, blok 1 je severni most, a blok 2 juzni most. Maticna ploca kao celina nije posebno oznacena, pa se upisuje X.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q47.png"
   },
   {
     "id": 48,
@@ -903,8 +913,9 @@
     "opcije": [],
     "tacan_odgovor": "монитор – 2, штампач – 2, скенер – 1, плотер – 2, звучник – 2, тастатура – 1, миш – 1, микрофон – 1",
     "objasnjenje": "Улазни уређаји (1) су они који шаљу податке у рачунар: тастатура, миш, скенер и микрофон. Излазни уређаји (2) су они које рачунар користи да прикаже или пренесе резултате кориснику: монитор, штампач, плотер и звучник. Плотер је специјализовани штампач за цртање векторске графике и такође спада у излазне уређаје.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q49.png"
   },
   {
     "id": 50,
@@ -916,8 +927,9 @@
     "opcije": [],
     "tacan_odgovor": "Unutrasnja magistrala - 4; Spoljasnja brza magistrala - 1,2, 5; Spoljasnja sporija magistrala - 3,6",
     "objasnjenje": "Magistrala 4 je veza procesora sa cipsetom i spada u unutrasnju magistralu. Brze spoljasnje magistrale su ka RAM-u, PCI Express-u i AGP-u, a sporije su ka PCI i periferijama preko juznog mosta.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q50.png"
   },
   {
     "id": 51,
@@ -929,8 +941,9 @@
     "opcije": [],
     "tacan_odgovor": "procesor - 2; AGP slot - 3; PCI slot - 1",
     "objasnjenje": "Na blok semi je procesor donji levi element oznacen brojem 2, AGP slot je oznacen brojem 3, a PCI slot brojem 1.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q51.png"
   },
   {
     "id": 52,
@@ -1269,8 +1282,9 @@
     ],
     "tacan_odgovor": "ако искористи више од 400MB биће упозорен да је достигао ниво упозорења",
     "objasnjenje": "Ukljucena je kvota sa limitom 450MB i nivoom upozorenja 400MB, ali nije ukljucena zabrana upisa posle prekoracenja limita. Zato korisnik dobija upozorenje kada predje 400MB, ali nije blokiran na 450MB.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q70.png"
   },
   {
     "id": 71,
@@ -1306,8 +1320,9 @@
     ],
     "tacan_odgovor": "Четири",
     "objasnjenje": "MBR (Master Boot Record) табела партиција резервише тачно 4 слота за примарне партиције, свака величине 16 бајтова, у оквиру 64 бајта намењена за табелу партиција. Ово ограничење је уграђено у сам дизајн MBR стандарда из 1983. године. Уколико је потребно више партиција, једна од четири може бити означена као проширена (extended)  унутар које се затим креирају логичке партиције.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q72.png"
   },
   {
     "id": 73,
@@ -1396,8 +1411,9 @@
     ],
     "tacan_odgovor": "Не смеју C и D, сва остала слова могу",
     "objasnjenje": "Na slici su slova C: i D: vec zauzeta sistemskom particijom i CD/DVD uredjajem. Novoj particiji se moze dodeliti bilo koje drugo slobodno slovo engleskog alfabeta.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q77.png"
   },
   {
     "id": 78,
@@ -1579,8 +1595,9 @@
     ],
     "tacan_odgovor": "смањићете волумен C",
     "objasnjenje": "Na Disk 0 nema nealociranog prostora; sav prostor je vec u postojecim particijama. Da bi se napravila nova particija, najpre treba smanjiti postojeci volumen C i osloboditi prostor.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q87.png"
   },
   {
     "id": 88,
@@ -1634,8 +1651,9 @@
     ],
     "tacan_odgovor": "172.30.30.5",
     "objasnjenje": "Adapter je podesen da IP dobija automatski, ali posto DHCP server ne postoji, Windows koristi podesavanja sa kartice Alternate Configuration. Tamo je uneta adresa 172.30.30.5.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q90.png"
   },
   {
     "id": 91,
@@ -1687,8 +1705,9 @@
     ],
     "tacan_odgovor": "променити адресу интерфејса Fa0/0 на рутеру",
     "objasnjenje": "PC1 je u mrezi 10.10.100.0/24 i kao podrazumevani prolaz dobija 10.10.100.101, dok je interfejs rutera na slici 10.10.10.10/24. Adresa ruterovog LAN interfejsa mora biti u istoj mrezi kao PC1.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q93.png"
   },
   {
     "id": 94,
@@ -1814,8 +1833,9 @@
     ],
     "tacan_odgovor": "Направите слику (image) свог рачунара користећи Create а system image у Backup And Restore прозору за дијалог.",
     "objasnjenje": "System image (slika sistema) pravi kompletnu kopiju celog operativnog sistema, uključujući sve sistemske datoteke, instalirane programe i podešavanja. Za razliku od opcije 'Back Up Files' koja čuva samo korisničke datoteke, system image omogućava povratak na tačno stanje sistema u trenutku pravljenja slike. Shadow Copies čuvaju samo prethodne verzije pojedinačnih datoteka, a System Repair tool služi za popravku sistema, ne za pravljenje rezervnih kopija. Dakle, jedino 'Create a system image' ispunjava zahtev — vraćanje i datoteka i podešavanja sistema.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q100.png"
   },
   {
     "id": 101,
@@ -1867,8 +1887,9 @@
     ],
     "tacan_odgovor": "избрисати подешавања за мрежни пролаз",
     "objasnjenje": "Da bi racunar komunicirao samo u lokalnoj mrezi, treba ukloniti podrazumevani mrezni prolaz. Bez default gateway-a racunar moze da komunicira sa lokalnim adresama, ali ne i sa udaljenim mrezama.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q103.png"
   },
   {
     "id": 104,
@@ -1884,11 +1905,8 @@
       "Read and Write",
       "Modify"
     ],
-    "tacan_odgovor": [
-      "Read only",
-      "Change"
-    ],
-    "objasnjenje": "Kada korisnik pripada više grupa, NTFS dozvole se sabiraju (kumulativne) — efektivne NTFS su Full Control (unija Read only i Full Control)  Deljene (Shared) dozvole se isto sabiraju — efektivne Shared su Change (unija Read only i Change)  Kada se pristupa deljenom resursu preko mreže, primenjuje se RESTRIKTIVNIJA od te dve vrednosti: mi (Full Control, Change) = Change. Pošto Change uključuje Read sposobnosti kao podskup, korisnik efektivno ima i Read only i Change nivo pristupa — oba su tačna opisa njegovih mogućnosti.",
+    "tacan_odgovor": "Change",
+    "objasnjenje": "Kada korisnik pripada više grupa, NTFS dozvole se sabiraju (kumulativne), pa su efektivne NTFS dozvole Full Control. Deljene (Shared) dozvole se takođe sabiraju, pa su efektivne Shared dozvole Change. Pri pristupu preko mreže primenjuje se restriktivnija kombinacija između NTFS i Shared dozvola, zato je konačna efektivna dozvola Change.",
     "has_image": false,
     "ai_generated": true
   },
@@ -1906,8 +1924,9 @@
     ],
     "tacan_odgovor": "na Disk1 3 GB, na Disk2 3 GB, na Disk3 3 GB",
     "objasnjenje": "Kod RAID-5 volumena sa tri diska koristan prostor je zbir dva udela, dok se jedan udeo koristi za parnost. Ako je korisniku vidljivo oko 6 GB, svaki disk učestvuje sa po 3 GB.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q105.png"
   },
   {
     "id": 106,
@@ -1923,8 +1942,9 @@
     ],
     "tacan_odgovor": "ће моћи да отвори, али неће моћи да мења садржај фолдера",
     "objasnjenje": "Pri pristupu preko mreze efektivna dozvola je presek share i NTFS dozvola. Share dozvola za Everyone je Read, dok NTFS dozvoljava Modify grupi Nastavnici, pa Milan moze da otvori folder, ali ne moze da menja sadrzaj preko deljenja.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q106.png"
   },
   {
     "id": 107,
@@ -1961,8 +1981,9 @@
       "покрените рачунар помоћу USB диска за опоравак и искористите слику система коју сте направили раније"
     ],
     "objasnjenje": "Слика диска (system image) је потпуна копија целокупног садржаја диска — оперативни систем, инсталиране апликације и подешавања. Враћањем те слике на нови диск преко Windows Recovery Environment добијате систем у тачно оном стању у коме је био пре недељу дана, без ручне реинсталације апликација. Опција 'реинсталација оперативног система' даје чисту инсталацију — све апликације би биле изгубљене. Опција 'System Restore' враћа само системске фајлове и регистри до претходне тачке враћања, али НЕ и апликације, а на потпуно новом (празном) диску уопште не може да функционише јер нема ни тачака враћања.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q108.png"
   },
   {
     "id": 109,
@@ -1977,13 +1998,11 @@
       "Отворите System Restore и изаберите враћање у предходно стање",
       "Покренете рачунар са диска за опоравак система и вратите слику система"
     ],
-    "tacan_odgovor": [
-      "Отворити Backup and Restore и изабрати опцију Restore all users files",
-      "Покренете рачунар са диска за опоравак система и вратите слику система"
-    ],
-    "objasnjenje": "Пошто заказани бекап прави резервну копију свих корисника, датотека и диск јединица, опција Restore all users files у Backup and Restore-у директно враћа корисничке датотеке са диска D без потребе за поновним покретањем система — минимална интервенција. Ако је потребно вратити потпуну слику диска D (укључујући партиције и структуру)  покретање са диска за опоравак и враћање системске слике је исправан приступ јер бекап садржи слику диск јединица. Опција Previous Versions не ради на новом (замењеном) диску јер нема shadow copies, а System Restore враћа само системске фајлове и регистри — не и корисничке податке на диску D.",
-    "has_image": false,
-    "ai_generated": true
+    "tacan_odgovor": "Отворити Backup and Restore и изабрати опцију Restore all users files",
+    "objasnjenje": "Потребно је вратити податке на диск D уз најмању интервенцију и минималан downtime. Зато се користи Backup and Restore и опција Restore all users files, јер враћа корисничке датотеке из резервне копије без враћања целе системске слике. System Restore не враћа корисничке податке, Previous Versions не помаже на новом диску, а враћање системске слике је тежа интервенција и није најбржи избор за овај захтев.",
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q109.png"
   },
   {
     "id": 110,
@@ -2010,7 +2029,7 @@
     "predmet": "operativni_sistemi",
     "predmet_naziv": "Operativni sistemi",
     "tekst": "U EFI (Unified Extensible Firmware Interface):",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "има краће време стартовања рачунара у односу на BIOS (Basic Input/Output System)",
@@ -2023,9 +2042,12 @@
     ],
     "tacan_odgovor": [
       "има краће време стартовања рачунара у односу на BIOS (Basic Input/Output System)",
+      "подржава до 128 партиција",
+      "обезбеђује непроменљиво складиштење информација о покретању система",
+      "има могућност коришћења миша",
       "подржава дискове веће од 2,2 ТБ"
     ],
-    "objasnjenje": "UEFI ima kraće vreme startovanja u odnosu na klasični BIOS i, uz GPT, podržava diskove veće od 2,2 TB.",
+    "objasnjenje": "UEFI је модернији firmware интерфејс од класичног BIOS-а. Омогућава брже покретање, графички интерфејс и коришћење миша, чува информације о покретању у непроменљивој меморији и уз GPT подржава дискове веће од 2,2 TB и велики број партиција. Нетачно је да не подржава 64-битне управљачке програме.",
     "has_image": false,
     "ai_generated": true
   },
@@ -2034,7 +2056,7 @@
     "predmet": "operativni_sistemi",
     "predmet_naziv": "Operativni sistemi",
     "tekst": "Као антивирус програми могу да се користе:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "KASPER",
@@ -2043,8 +2065,13 @@
       "AGV",
       "NOD32"
     ],
-    "tacan_odgovor": "AVAST, AGV (AVG) i NOD32 su antivirusni programi. KASPER verovatno upućuje na Kaspersky, koji je takođe antivirusni program.",
-    "objasnjenje": "AVAST, AVG (ovde napisano kao AGV) i NOD32 (ESET) su poznati antivirusni programi koji se koriste za zaštitu računara od malvera, virusa i trojanaca. NORTON COMMANDER nije antivirusni program — to je menadžer fajlova (file manager) koji je bio popularan u DOS eri. Kaspersky (KASPER) jeste antivirusni program, ali je naziv pogrešno napisan u ponuđenim odgovorima. Tačni odgovori su dakle: AVAST (3)  AGV/AVG (4) i NOD32 (5)",
+    "tacan_odgovor": [
+      "KASPER",
+      "AVAST",
+      "AGV",
+      "NOD32"
+    ],
+    "objasnjenje": "KASPER se u zadatku odnosi na Kaspersky, AVAST, AGV/AVG i NOD32 su antivirusni programi. Norton Commander nije antivirusni program, već fajl menadžer iz DOS okruženja.",
     "has_image": false,
     "ai_generated": true
   },
@@ -2053,7 +2080,7 @@
     "predmet": "operativni_sistemi",
     "predmet_naziv": "Operativni sistemi",
     "tekst": "Приликом конфигурисања резервног копирања (бекапа) података на Windows радној станици могуће је одабрати следеће опције:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "резервно копирање може да се врши на диск тог рачунара или на диск у мрежи",
@@ -2062,7 +2089,10 @@
       "на радној станици не може да се конфигурише резервно копирање, може само на серверу",
       "на радној станици не може да се конфигурише резервно копирање комплетног рачунара"
     ],
-    "tacan_odgovor": "1. резервно копирање може да се врши на диск тог рачунара или на диск у мрежи; 3. резервно копирање може да се конфигурише да се обавља једном месечно",
+    "tacan_odgovor": [
+      "резервно копирање може да се врши на диск тог рачунара или на диск у мрежи",
+      "резервно копирање може да се конфигурише да се обавља једном месечно"
+    ],
     "objasnjenje": "Windows Backup and Restore (dostupan na Windows radnim stanicama) podržava čuvanje rezervnih kopija na lokalnom disku, eksternom disku ili mrežnoj lokaciji (opcija 1 je tačna)  Raspored pravljenja rezervnih kopija može se podesiti na dnevni, nedeljni ili mesečni interval, dakle mesečno je validna opcija (opcija 3 je tačna)  Opcija 2 je netačna jer se bekap može konfigurisati i za foldere. Opcija 4 je netačna jer Windows radne stanice imaju ugrađenu podršku za bekap. Opcija 5 je netačna jer Windows podržava i pravljenje sistemske slike (System Image) koja obuhvata kompletan računar.",
     "has_image": false,
     "ai_generated": true
@@ -2108,7 +2138,7 @@
     "predmet": "operativni_sistemi",
     "predmet_naziv": "Operativni sistemi",
     "tekst": "Управо сте инсталирали нови оперативни систем унутар виртуелне машине. Примећујете да се извршење задатака у оперативном систему хоста знатно успорило. Да бисте повећали перформансе хоста:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "инсталираћете више физичке меморије",
@@ -2241,8 +2271,9 @@
       "кориснику Profesor није дозвољено уписивање на диск Е ако прекорачи лимит квоте"
     ],
     "objasnjenje": "Za korisnika PC1\\Profesor prikazan je quota limit 100KB i status Above Limit, sto znaci da je kvota podesena i da je korisnik prekoracio dozvoljeni limit. U ovoj konfiguraciji korisniku se ne dozvoljava nastavak upisa preko limita kvote.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q121.png"
   },
   {
     "id": 122,
@@ -2263,8 +2294,9 @@
       "На мрежном адаптеру оспособљен је TCP/IPv6 протокол"
     ],
     "objasnjenje": "Listing prikazuje Wireless LAN adapter Wi-Fi, pa je rec o bezicnom adapteru. DHCP je ukljucen, gateway i DHCP server su isti uredjaj, a prisustvo link-local IPv6 adrese pokazuje da je TCP/IPv6 protokol omogucen.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q122.png"
   },
   {
     "id": 123,
@@ -2306,28 +2338,34 @@
       "Користи се енкрипција за заштиту података"
     ],
     "objasnjenje": "Na disku postoji EFI System Partition, sto ukazuje na UEFI boot. C: particija je oznacena kao BitLocker Encrypted, pa se koristi enkripcija. Prikazan je jedan disk od oko 476GB, ne dva diska niti SSD od 256GB.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q124.png"
   },
   {
     "id": 125,
     "predmet": "operativni_sistemi",
     "predmet_naziv": "Operativni sistemi",
     "tekst": "Рачунар са именом Stanica1 може да се повеже на бежичну мрежу под називом WiFi1 и бежичну мрежу под називом WiFi2. WiFi1 има лош сигнал и веза се често губи. WiFi2 је доступан само у одређено доба дана. WiFi2 има јачи сигнал који је поузданији од WiFi1. Морате да конфигуришете рачунар Stanica1 тако да користи WiFi2 кад год је то могуће. WiFi1 треба користити када WiFi2 није доступан. Да бисте то постигли потребно је да:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 1,
     "opcije": [
-      "У својствима за WiFi2, изаберите опцију Connect even if the network is not broadcasting its name (SSID) 4",
+      "У својствима за WiFi2, изаберите опцију Connect even if the network is not broadcasting its name (SSID)",
       "У својствима за WiFi1, изаберите опцију Connect automatically when this network is in range",
       "У својствима за WiFi1, изаберите опцију Enable WLAN connection settings",
       "У својствима за WiFi2, изаберите опцију Connect automatically when this network is in range",
       "У својствима за WiFi1, изаберите опцију Look for other wireless networks while connected to this network",
-      "У својствима за WiFi2, изаберите опцију Look for other wireless networks while connected to this network Допуните следеће реченице и табеле"
+      "У својствима за WiFi2, изаберите опцију Look for other wireless networks while connected to this network"
     ],
-    "tacan_odgovor": "4. У својствима за WiFi2, изаберите опцију Connect automatically when this network is in range; 5. У својствима за WiFi1, изаберите опцију Look for other wireless networks while connected to this network; 2. У својствима за WiFi1, изаберите опцију Connect automatically when this network is in range",
+    "tacan_odgovor": [
+      "У својствима за WiFi2, изаберите опцију Connect automatically when this network is in range",
+      "У својствима за WiFi1, изаберите опцију Look for other wireless networks while connected to this network",
+      "У својствима за WiFi1, изаберите опцију Connect automatically when this network is in range"
+    ],
     "objasnjenje": "Da bi Stanica1 uvek preferirala WiFi2, potrebno je da WiFi2 ima uključenu opciju 'Connect automatically' (opcija 4) — tako se Windows automatski konektuje na njega čim postane dostupan. WiFi1 mora imati uključenu opciju 'Connect automatically' (opcija 2) kako bi služio kao rezervna veza kada WiFi2 nije dostupan. Ključna je opcija 5 na WiFi1 — 'Look for other wireless networks while connected' — jer Windows dok je konektovan na WiFi1 nastavlja da traži dostupne mreže, i čim WiFi2 postane dostupan, automatski prelazi na njega kao prioritetnu mrežu.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q125.png"
   },
   {
     "id": 126,
@@ -2378,8 +2416,9 @@
     "opcije": [],
     "tacan_odgovor": "Event Viewer",
     "objasnjenje": "Prikaz Summary of Administrative Events pripada Windows alatu Event Viewer, koji prikazuje kriticne dogadjaje, greske, upozorenja i informativne zapise iz sistemskih logova.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q129.png"
   },
   {
     "id": 130,
@@ -2404,8 +2443,9 @@
     "opcije": [],
     "tacan_odgovor": "Power buttons and lid -> Lid close action",
     "objasnjenje": "Zahtev se odnosi na ponasanje laptopa kada se poklopac zatvori. U Advanced settings to se podesava u grupi Power buttons and lid, preko opcije Lid close action, gde se bira Do nothing.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q131.png"
   },
   {
     "id": 132,
@@ -2508,8 +2548,9 @@
     "opcije": [],
     "tacan_odgovor": "10 GB",
     "objasnjenje": "Striped volume sabira prostor sa diskova. Ako su u volumenu dva dela od po 5 GB, korisniku je vidljivo ukupno 10 GB.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q139.png"
   },
   {
     "id": 140,
@@ -2521,8 +2562,9 @@
     "opcije": [],
     "tacan_odgovor": "Novo; Spreman; Zavrsen; Blokiran/cekanje",
     "objasnjenje": "Dijagram prikazuje uobicajena stanja procesa: nov proces prelazi u spreman, spreman proces dobija procesor i postaje RUN, iz RUN moze da zavrsi ili da predje u stanje cekanja/blokiranja, a iz cekanja se vraca u spreman.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q140.png"
   },
   {
     "id": 141,
@@ -2552,8 +2594,9 @@
     ],
     "tacan_odgovor": "tracert → 2, ping → 1, pathping → 4, Ipconfig /all → 3",
     "objasnjenje": "ping šalje ICMP pakete odredišnom računaru i meri vreme odziva (funkcija 1)  tracert prati rutu paketa i ispisuje sve rutere na putu do odredišta (funkcija 2)  Ipconfig /all prikazuje sve mrežne parametre adaptera: IP adresu, masku podmreže, podrazumevani mrežni prolaz, DNS itd. (funkcija 3)  pathping kombinuje funkcionalnosti ping i tracert — prati putanju i meri gubitak paketa i kašnjenje na svakom čvoru (funkcija 4)",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q142.png"
   },
   {
     "id": 143,
@@ -2565,8 +2608,9 @@
     "opcije": [],
     "tacan_odgovor": "zelena - 2; roze - 1; plava - 3; siva - X",
     "objasnjenje": "Po standardnom oznacavanju audio portova, zelena je line-out/zvucnici, roze je mikrofon, plava je line-in, a siva nije prikazana medju ova tri porta.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q143.png"
   },
   {
     "id": 144,
@@ -2583,8 +2627,9 @@
     ],
     "tacan_odgovor": "2. Брисање",
     "objasnjenje": "Брисање датотеке је операција која ослобађа сав простор додељен датотеци унутар фајл система. Када се датотека обрише, оперативни систем уклања одговарајућу ставку из директоријума и ослобађа све блокове које је датотека заузимала, чиме тај простор постаје доступан за нове датотеке. Остале операције (читање, упис, креирање) не ослобађају простор — напротив, креирање и упис простор додељују, а читање га само користи.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q144.png"
   },
   {
     "id": 145,
@@ -2630,8 +2675,9 @@
     "opcije": [],
     "tacan_odgovor": "IP adresa - 1; DNS2 - 5; SM - 2; DG - 3; DNS1 - 4",
     "objasnjenje": "U IPv4 prozoru redom su polja za IP adresu, subnet mask i default gateway, a ispod njih preferred DNS i alternate DNS.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q147.png"
   },
   {
     "id": 148,
@@ -2654,8 +2700,9 @@
       "2 — Ransomware: Уцењивачки напад који подразумева насилно шифровање садржаја који жртва чува на свом уређају, са захтевом за исплату у замену за кључ за декрипцију података."
     ],
     "objasnjenje": "Code injection (3) је напад где нападач убацује злонамерни код кроз рањива места у веб апликацији (нпр. SQL injection, XSS) или преко URL параметара. DoS/DDoS (6) напад преплављује сервер великим бројем захтева до тачке да легитимни корисници не могу да приступе ресурсу. Ransomware (2) је малвер који шифрује жртвине датотеке и тражи откупнину (обично у криптовалути) у замену за кључ за дешифровање.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q148.png"
   },
   {
     "id": 149,
@@ -2685,8 +2732,9 @@
     ],
     "tacan_odgovor": "Tačno sparivanje: 1-BCB→sadrži informacije potrebne za podizanje OS; 2-PCB→sadrži informacije o sistemu datoteka; 4-FCB→sadrži atribute datoteka i ukazivače na alokaciju; 3-Kontrolne strukture za podizanje→određuju konkretan sadržaj (blokove)",
     "objasnjenje": "BCB (Boot Control Block) čuva podatke potrebne za podizanje operativnog sistema sa particije. PCB (Partition Control Block) sadrži metapodatke o celoj particiji — broj blokova, veličinu bloka, listu slobodnih blokova, dakle informacije o sistemu datoteka. FCB (File Control Block) čuva atribute konkretne datoteke (ime, veličina, dozvole, vlasnik) i pokazivače na blokove diska u kojima je njen sadržaj fizički smešten. Ova podela odgovara standardnoj hijerarhiji upravljanja fajl sistemom opisanoj u Silberschatz-ovom udžbeniku operativnih sistema.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q150.png"
   },
   {
     "id": 151,
@@ -2704,8 +2752,9 @@
     ],
     "tacan_odgovor": "Optimizacija diska - 1; Sertifikati trenutnog korisnika - X; Upravljanje hardverom i drajverima - 2; Detalji o sistemu - 3",
     "objasnjenje": "dfrgui.exe pokrece Optimize Drives, devmgmt.msc Device Manager, a msinfo32.exe System Information. Za upravljanje sertifikatima trenutnog korisnika koristi se certmgr.msc, koji nije ponudjen, pa se upisuje X.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q151.png"
   },
   {
     "id": 152,
@@ -2808,8 +2857,9 @@
     ],
     "tacan_odgovor": "покренете услужни програм System Preparation",
     "objasnjenje": "System Preparation Tool (Sysprep) је уграђени Windows алат који припрема рачунар за клонирање тако што уклања јединствене системске информације (SID, имена рачунара, активациони подаци) и поставља систем у OOBE (Out-of-Box Experience) стање. Након покретања Sysprep-а, рачунар је спреман за снимање слике помоћу алата попут ImageX или DISM. Та слика се затим може применити на 100 нових рачунара, при чему сваки добија нови јединствени идентитет приликом првог покретања.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q157.png"
   },
   {
     "id": 158,
@@ -3016,17 +3066,19 @@
     "id": 169,
     "predmet": "odrzavanje",
     "predmet_naziv": "Održavanje računarskih sistema",
-    "tekst": "Након што је кликнуо на линк у електронској поруци, корисник је добио следећу поруку о грешци: Да бисте решили проблем прво ћете: Ажурирати регистре опозваних сертификата (Certificate Revocation List - CRL)",
+    "tekst": "????? ??? ?? ??????? ?? ???? ? ???????????? ??????, ???????? ?? ????? ??????? ?????? ? ??????. ?? ????? ?????? ??????? ???? ????:",
     "tip": "mc_single",
     "bodovi": 1,
     "opcije": [
-      "Контактирати интернет провајдера",
-      "Поново покренути интернет претраживач"
+      "????????? ???????? ????????? ??????????? (Certificate Revocation List - CRL)",
+      "???????????? ???????? ??????????",
+      "?????? ????????? ???????? ???????????"
     ],
-    "tacan_odgovor": "Ажурирати регистре опозваних сертификата (Certificate Revocation List - CRL)",
-    "objasnjenje": "Грешка настаје зато што прегледач не може да провери да ли је SSL/TLS сертификат сајта опозван — CRL листа је застарела или недоступна. Ажурирање CRL-а омогућава прегледачу да провери статус сертификата и успостави безбедну везу. Контактирање провајдера не решава проблем јер је он локалне природе (клијентска страна)  а рестартовање прегледача не ажурира листу опозваних сертификата.",
-    "has_image": false,
-    "ai_generated": true
+    "tacan_odgovor": "????????? ???????? ????????? ??????????? (Certificate Revocation List - CRL)",
+    "objasnjenje": "?????? ????????? ??????? ?? ???????????? ???????????? ??? ?????. ???? ????? ?? ????????? ???????? ????????? ??????????? (CRL), ???? ?? ?????? ????? ?? ??????? ?????? ???????????. ???????????? ???????? ?????????? ? ??????? ????????? ?????????? ?? ???????? ????? ????????.",
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q169.png"
   },
   {
     "id": 170,
@@ -3113,8 +3165,8 @@
       "објасните кориснику како да се пријави на рачунар са администраторског налога",
       "подесите да ажурирање Windowsa може да уради било који кориснички налог"
     ],
-    "tacan_odgovor": "конфигуришете параметар локалне групну полисе за Windows Update, тако да корисник nikola има право да ручно ажурира Windows",
-    "objasnjenje": "Стандардни кориснички налог (без администраторских привилегија) по подразумеваним подешавањима не може ручно да покрене ажурирање Windowsa. Исправан начин да се то омогући без давања пуних администраторских права јесте преко Local Group Policy Editor-а (gpedit.msc)  где постоји политика која дозвољава корисницима без администраторских права да примењују ажурирања. Опција 2 (пријава на admin налог) представља безбедносни ризик јер би корисник добио неограничен приступ систему, а опција 3 је превише широка и такође нарушава безбедносну политику.",
+    "tacan_odgovor": "конфигуришите параметар локалне групну полисе за Windows Update, тако да корисник nikola има право да ручно ажурира Windows",
+    "objasnjenje": "??????????? ????????? ?? ????? ?????? ???????????????? ????? ???? ?? ?? ????? ???????? ?????????. ???????? ?? ????????????? ??????? ?????? ?????? ?? Windows Update ???? ?? ???????? nikola ??? ????? ?? ????? ??????? Windows. ???? ?? ???????? ?????? ??? ??????????? ?????? ????????????????? ???????????.",
     "has_image": false,
     "ai_generated": true
   },
@@ -3224,15 +3276,16 @@
     ],
     "tacan_odgovor": "Селектовати домен а затим опцију Find, у поље description уписати krojac, селектовати све пронађене кориснике и убацити их у групу Krojaci",
     "objasnjenje": "Krojaci su u vise organizacionih jedinica i u opisu naloga imaju vrednost krojac. Zato treba pretraziti ceo domen po polju description=krojac i sve pronadjene korisnike dodati u grupu Krojaci.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q180.png"
   },
   {
     "id": 181,
     "predmet": "odrzavanje",
     "predmet_naziv": "Održavanje računarskih sistema",
     "tekst": "Радну температуру процесора могуће је проверити користећи:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "BIOS",
@@ -3241,7 +3294,10 @@
       "Computer Menagement конзолу",
       "Task Manager"
     ],
-    "tacan_odgovor": "BIOS, програм SpeedFan",
+    "tacan_odgovor": [
+      "BIOS",
+      "програм SpeedFan"
+    ],
     "objasnjenje": "BIOS/UEFI okruženje prikazuje radnu temperaturu procesora u sekciji za hardware monitoring, dostupnoj pri pokretanju računara pre učitavanja OS-a. SpeedFan je specijalizovani softverski alat koji u realnom vremenu prati temperature procesora, matične ploče i ostalih komponenti koristeći senzore unutar sistema. Resource Monitor i Task Manager prikazuju opterećenje i upotrebu procesora (%)  ali ne i temperaturu. Computer Management konzola služi za upravljanje diskom, korisnicima i servisima — nema funkciju praćenja temperature.",
     "has_image": false,
     "ai_generated": true
@@ -3251,7 +3307,7 @@
     "predmet": "odrzavanje",
     "predmet_naziv": "Održavanje računarskih sistema",
     "tekst": "Желите да уклоните прашину унутар десктоп рачунара. Да би се заштитили од прашине користићете:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "маску",
@@ -3274,7 +3330,7 @@
     "predmet": "odrzavanje",
     "predmet_naziv": "Održavanje računarskih sistema",
     "tekst": "Сања је техничар који често путује са својом рачунарском опремом у крајеве са екстремним временским условима. Управо је добила позив да отпутује у град који има суву, топлу и прашњаву климу. Пита вас за савет како да заштити опрему. Препоручићете јој да понесе:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "грејна тела",
@@ -3297,7 +3353,7 @@
     "predmet": "odrzavanje",
     "predmet_naziv": "Održavanje računarskih sistema",
     "tekst": "Креиран директоријумски сервис у мрежи:",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       "Омогућава централизовану аутентификацију корисника унутар домена",
@@ -3449,8 +3505,9 @@
       "Креирати и форматирати партиције на диску који је додат"
     ],
     "objasnjenje": "Dodati disk je prikazan kao Unknown i Not Initialized, pa ga najpre treba inicijalizovati. Nakon toga je potrebno kreirati i formatirati particiju da bi korisnik mogao da ga koristi.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q190.png"
   },
   {
     "id": 191,
@@ -3471,8 +3528,9 @@
       "Конфигурисати параметар групне полисе Audit Policy / Audit object access"
     ],
     "objasnjenje": "За праћење приступа фасцикли у Windows 10 потребна су два корака. Прво, у Group Policy Editor мора се омогућити Audit Policy / Audit object access — ова политика налаже оперативном систему да евидентира догађаје везане за приступ објектима фајл система. Друго, на самом директоријуму C:\\Folder1 мора се конфигурисати SACL (System Access Control List) преко Properties → Security → Advanced → Auditing — овде се дефинише за које кориснике и које радње (читање, измена, брисање) се генеришу log записи. Audit directory service access се односи на Active Directory објекте, а не на фајл систем, па није тачан одговор.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q191.png"
   },
   {
     "id": 192,
@@ -3531,18 +3589,14 @@
     "predmet": "odrzavanje",
     "predmet_naziv": "Održavanje računarskih sistema",
     "tekst": "На левој страни су дати називи појмова, а на десној страни њихова објашњења. На линији поред објашњења уписати број њему одговарајућег појма. временска функција, дефинисана као условна",
-    "tip": "mc_single",
+    "tip": "open",
     "bodovi": 2,
-    "opcije": [
-      "поправљивост вероватноћа да ће систем радити коректно у интервалу (serviceability) [t1, t2] под предпоставком да је радио коректно у тренутку t1",
-      "поузданост временска функција, дефинисана као вероватноћа да (reliability) “покварени” систем може бити доведен у оперативно стање унутар одређеног временског периода t.",
-      "редундантност временска функција, дефинисана као вероватноћа да (redundancy) систем ради коректно и да је на располагању да изврши своје функције у временском тренутку t.",
-      "расположивост додавање информација подацима у циљу омогућавања (availability) детекције, маскирања, или толеранције квара."
-    ],
-    "tacan_odgovor": "1",
-    "objasnjenje": "Дефиниција која одговара изразу 'временска функција, дефинисана као условна вероватноћа' је под бројем 1 — поправљивост (serviceability)  вероватноћа да ће систем радити коректно у интервалу [t1,2] под претпоставком да је радио коректно у тренутку t1. Кључна реч је 'условна' (conditional) вероватноћа — дефиниција укључује услов 'под претпоставком да је радио коректно у тренутку t1', što је типична карактеристика условне вероватноће. Остале три дефиниције описују безусловне вероватноће или сасвим другачије концепте.",
-    "has_image": false,
-    "ai_generated": true
+    "opcije": [],
+    "tacan_odgovor": null,
+    "objasnjenje": "?????????? ?? ??????? ??????????? ?? ?? ?????? ?????? ???????? ? ????????? [t1, t2] ??? ?? ????? ???????? ? ???????? t1. ???????????? ??????? ??????????? ?? ?? ????????? ?????? ?????? ? ?????????? ????? ? ??????? t. ????????????? ?? ??????????? ?? ?????? ? ????? ???????? ???? ? ???? ?? ?????? ????????. ????????????? ?? ???????? ??????????? ??? ??????? ???? ?????????, ????????? ??? ??????????? ?????.",
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q196.png"
   },
   {
     "id": 197,
@@ -3559,8 +3613,9 @@
     ],
     "tacan_odgovor": "omogućava prijavu na domen → 2 (korisnik)  omogućava da se objektima upravlja kolektivno umesto pojedinanačno → 1 (grupa)  objekat koji nema nikakve bezbednosne dozvole → 3 (kontakt)  koristi se za prikupljanje objekata koji dele zajedničke zahteve za administriranje, konfigurisanje ili vidljivost → 4 (organizaciona jedinica)",
     "objasnjenje": "Korisnik (user) je objekat koji predstavlja osobu i jedini može da se prijavi na domen. Grupa (group) služi za kolektivno upravljanje — umesto da se dozvole dodeljuju svakom korisniku posebno, dodaju se grupi. Kontakt (contact) je informacioni objekat bez bezbednosnih dozvola, koristi se npr. za spoljne e-mail adrese. Organizaciona jedinica (OU) je kontejner koji grupiše objekte radi lakše administracije, primene grupnih politika (GPO) i delegiranja kontrole.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q197.png"
   },
   {
     "id": 198,
@@ -3577,8 +3632,9 @@
     ],
     "tacan_odgovor": "Тачно упаривање: опис 'произвођач не задржава право власништва над копијама, право власништва се преноси на корисника' → 2. Free licence | опис 'кориснику даје право измена, али мора да објави изворни код' → 3. Copyleft licence | опис 'произвођач даје право коришћења копија, задржава власништво' → 1. Proprietary licence | опис 'изворни код се може искористити у затвореном коду' → 4. Permissive licence",
     "objasnjenje": "Proprietary (власничка) лиценца — произвођач задржава власништво над свим копијама, корисник само добија право коришћења. Free (слободна) лиценца — власништво над копијом прелази на корисника, нема ограничења. Copyleft лиценца (нпр. GPL) — дозвољава измене, али свака измена мора бити објављена под истом лиценцом (share-alike принцип)  Permissive (дозвољавајућа) лиценца (нпр. MIT, BSD) — дозвољава уградњу у власнички затворени код без обавезе објављивања измена.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q198.png"
   },
   {
     "id": 199,
@@ -3594,8 +3650,9 @@
     ],
     "tacan_odgovor": "1-Full backup → kopira sve podatke sa zadate lokacije na zadato odredište; 2-Incremental backup → kopira samo promene nastale u odnosu na poslednju rezervnu kopiju bilo kog tipa; 3-Differential backup → svaki sledeći put kopiraju se sve promene nastale u odnosu na prvu sveobuhvatnu kopiju; 4-Schedule backup → pokreće se u određenom vremenskom intervalu, kada se prvi put pokrene kopira sve podatke",
     "objasnjenje": "Full backup uvek kopira sve podatke i služi kao osnova za ostale tipove. Incremental backup kopira samo promene od poslednje kopije bilo kog tipa, što ga čini najbržim ali komplikovanijim za obnovu. Differential backup kopira sve promene od poslednjeg full backup-a, pa je obnova brža nego kod incrementala. Schedule backup je mehanizam automatskog pokretanja u zadatim intervalima, a ne posebna vrsta po sadržaju — pri prvom pokretanju kopira sve, a dalje prema podešavanjima.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q199.png"
   },
   {
     "id": 200,
@@ -3617,8 +3674,9 @@
       "4→Потребно је генерисати извештаје о стању хардверских и софтверских ресурса (perfmon /report = генерише системски дијагностички извештај)"
     ],
     "objasnjenje": "Windows Performance Monitor нуди четири различита режима рада: /res отвара Resource Monitor за анализу употребе ресурса по процесу у реалном времену, /rel отвара Reliability Monitor за преглед историје стабилности система, /sys отвара класични Performance Monitor са могућношћу праћења бројача (нпр. Print Spooler\\Total Jobs Printed) кроз временски период, а /report аутоматски генерише детаљан дијагностички извештај о хардверу и софтверу. Свако повезивање одговара примарној намени те команде.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q200.png"
   },
   {
     "id": 201,
@@ -3628,8 +3686,8 @@
     "tip": "open",
     "bodovi": 3,
     "opcije": [],
-    "tacan_odgovor": "Tačan redosled (1-5)  3 → 5 → 2 → 1 → 4. Odnosno: Set objOU = GetObjec (...) → Set objComputer = objOU.Creat (...) → objComputer.Put \"sAMAccountName\", \"Lucas$\" → objComputer.Put \"userAccountControl\", 4096 → objComputer.SetInfo",
-    "objasnjenje": "Najpre se mora dobiti referenca na organizacionu jedinicu pomoću GetObject (korak 3)  zatim se kreira objekat računara unutar te OU pomoću Create metode (korak 5)  Nakon toga se postavljaju atributi — sAMAccountName (korak 2) i userAccountControl sa vrednošću 4096 koja označava računarski nalog (korak 1)  Na kraju se poziva SetInfo (korak 4) koji upisuje sve izmene u Active Directory — bez ovog koraka računar ne bi bio zaista kreiran.",
+    "tacan_odgovor": "Ta?an redosled: 3 ? 5 ? 2 ? 1 ? 4. Odnosno: Set objOU = GetObject(\"LDAP://OU=Jedi,DC=starwars,DC=com\") ? Set objComputer = objOU.Create(\"Computer\", \"CN=Lucas\") ? objComputer.Put \"sAMAccountName\", \"Lucas$\" ? objComputer.Put \"userAccountControl\", 4096 ? objComputer.SetInfo",
+    "objasnjenje": "Najpre se dobija referenca na organizacionu jedinicu Jedi pomo?u GetObject. Zatim se u toj OU kreira objekat ra?unara Lucas. Posle kreiranja postavljaju se atributi sAMAccountName i userAccountControl, a na kraju se poziva SetInfo koji upisuje izmene u Active Directory.",
     "has_image": false,
     "ai_generated": true
   },
@@ -3785,8 +3843,9 @@
     ],
     "tacan_odgovor": "склопног цртежа",
     "objasnjenje": "Саставница (или спецификација) је табеларни преглед свих делова и склопова приказаних на цртежу, и обавезни је саставни део склопног цртежа. Склопни цртеж приказује производ у склопљеном стању са свим деловима на окупу, па је потребна саставница која набраја, именује и нумерише сваки елемент. Радионички цртеж приказује само један конкретан део са мерама за израду, а шематски цртеж приказује функционалне шеме (нпр. електричне) — ни један ни други нема саставницу.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q210.png"
   },
   {
     "id": 211,
@@ -3802,8 +3861,9 @@
     ],
     "tacan_odgovor": "стварне мере",
     "objasnjenje": "При котирању техничких цртежа увек се уносе стварне (номиналне) мере предмета, без обзира на размеру у којој је цртеж израђен. Ово је основно правило техничког цртања — размера служи само за визуелни приказ, али коте (мере) увек одговарају стварним димензијама предмета. Тако радионичар или монтер може директно очитати мере без рачунања са размером.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q211.png"
   },
   {
     "id": 212,
@@ -3819,8 +3879,9 @@
     ],
     "tacan_odgovor": "величина на цртежу: величина у стварности",
     "objasnjenje": "Размера техничког цртежа представља однос величине на цртежу према стварној величини. Записивање 1:100 значи да је нешто 100 пута мање на цртежу него у стварности — нпр. линија дугачка 1 cm на цртежу одговара 100 cm (1 метар) у стварности. Овај формат је стандардан по ISO нормама за техничко цртање.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q212.png"
   },
   {
     "id": 213,
@@ -3945,8 +4006,9 @@
     ],
     "tacan_odgovor": "Active Directory",
     "objasnjenje": "Microsoft Visio ima specijalizovani template 'Active Directory' koji je namenjen upravo za kreiranje dijagrama infrastrukture domena. Ovaj template sadrži gotove šablone simbola za domein kontrolere, korisnike, grupe, organizacione jedinice (OU) i grupne polise (GPO)  Korišćenjem ovog template-a mogu se precizno i standardizovano prikazati sve komponente Active Directory okruženja, što je mnogo prikladnije od generičkih opcija poput Block Diagram ili Timeline.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q219.png"
   },
   {
     "id": 220,
@@ -3962,8 +4024,9 @@
     ],
     "tacan_odgovor": "Слици 5",
     "objasnjenje": "Sortiranje je podeseno najpre po nazivu A to Z, a zatim po brojnom stanju od najmanjeg ka najvecem. Takav redosled redova prikazan je na Slici 5.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q220.png"
   },
   {
     "id": 221,
@@ -4033,8 +4096,9 @@
     ],
     "tacan_odgovor": "3,2cm",
     "objasnjenje": "Razmera 1:100 znaci da 1cm na crtezu predstavlja 100cm u prirodi. Duzina 3,2m je 320cm, a 320cm / 100 = 3,2cm na crtezu.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q224.png"
   },
   {
     "id": 225,
@@ -4051,8 +4115,9 @@
     ],
     "tacan_odgovor": "А4",
     "objasnjenje": "U razmeri 1:50 dimenzije 14,5m x 10m postaju 29cm x 20cm. Taj format staje na A4 papir, narocito u polozenom polozaju.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q225.png"
   },
   {
     "id": 226,
@@ -4088,8 +4153,9 @@
     ],
     "tacan_odgovor": "Отпорник R на дигиталном улазу обезбеђује логичку „0“",
     "objasnjenje": "Kada je taster otvoren, ulaz DIN je preko otpornika R povezan na GND. Otpornik tada deluje kao pull-down i obezbedjuje logicku 0.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q227.png"
   },
   {
     "id": 228,
@@ -4105,8 +4171,9 @@
     ],
     "tacan_odgovor": "Отпорник R на дигиталном улазу обезбеђује логичку „1“",
     "objasnjenje": "Kada je taster otvoren, ulaz DIN je preko otpornika R povezan na VCC. Otpornik tada deluje kao pull-up i obezbedjuje logicku 1.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q228.png"
   },
   {
     "id": 229,
@@ -4174,15 +4241,16 @@
       "врсту и намену грађевинског објекта"
     ],
     "objasnjenje": "Idejno resenje prikazuje planiranu koncepciju, vrstu i namenu objekta. Detaljni crtezi u razmeri 1:50, seme i detalji karakteristicni su za kasnije faze projektovanja.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q231.png"
   },
   {
     "id": 232,
     "predmet": "tehnicka_dokumentacija",
     "predmet_naziv": "Tehnička dokumentacija",
     "tekst": "Eлектронски документ јесте документ настао изворно у електронској форми, у одговарајућем електронском формату који је електронски потписан квалификованим електронским потписом. Заокружи одговарајуће електронске формате који се односе на електронски документ.",
-    "tip": "mc_single",
+    "tip": "mc_multi",
     "bodovi": 2,
     "opcije": [
       ".pdf",
@@ -4222,8 +4290,9 @@
       "радни задатак"
     ],
     "objasnjenje": "Osnovni elementi tehnickog crteza su okvir i zaglavlje, dok skica tehnickog crteza i radni zadatak ne spadaju u osnovne elemente samog tehnickog crteza.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q233.png"
   },
   {
     "id": 234,
@@ -4272,8 +4341,9 @@
       "Microsoft Word"
     ],
     "objasnjenje": "Korisnicko uputstvo je tekstualni dokument, pa se izradjuje u programima za obradu teksta kao sto su LibreOffice Writer i Microsoft Word.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q235.png"
   },
   {
     "id": 236,
@@ -4285,8 +4355,9 @@
     "opcije": [],
     "tacan_odgovor": "Dimenzija prostorije je 233 x 202 cm; sirina vrata je 106 cm; sirina prozora je 122 cm; debljina zida je 5 cm.",
     "objasnjenje": "Unutrasnja sirina prostorije je 233cm. Unutrasnja visina je zbir segmenata 80cm i 122cm, dakle 202cm. Vrata su 106cm, prozor 122cm, a debljina zida je (243-233)/2 = 5cm.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q236.png"
   },
   {
     "id": 237,
@@ -4298,8 +4369,9 @@
     "opcije": [],
     "tacan_odgovor": "10,005 V",
     "objasnjenje": "Srednja vrednost je ponderisana: (10*7 + 10,1*4 + 9,9*3 + 10,2*2 + 9,8*2 + 10,3*1 + 9,7*1) / 20 = 200,1 / 20 = 10,005 V.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q237.png"
   },
   {
     "id": 238,
@@ -4311,8 +4383,9 @@
     "opcije": [],
     "tacan_odgovor": "9,6 V",
     "objasnjenje": "Ponderisana srednja vrednost je 10,1 V. Najvece odstupanje od 10,1 V ima merenje 9,6 V, jer je razlika 0,5 V.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q238.png"
   },
   {
     "id": 239,
@@ -4324,8 +4397,9 @@
     "opcije": [],
     "tacan_odgovor": "Kotni broj - 4; Strelica - 3; Kotna linija - 2; Pomocna kotna linija - 1",
     "objasnjenje": "Broj 4 oznacava kotni broj, broj 3 pokazuje strelicu, broj 2 kotnu liniju, a broj 1 pomocnu kotnu liniju kojom se kota izvlaci od objekta.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q239.png"
   },
   {
     "id": 240,
@@ -4337,8 +4411,9 @@
     "opcije": [],
     "tacan_odgovor": "841 x 1188 - 5; 297 x 420 - 2; 594 x 840 - 4; 420 x 594 - 3; 210 x 297 - 1",
     "objasnjenje": "Standardni A formati su: A0 841x1188, A1 594x840/841, A2 420x594, A3 297x420 i A4 210x297 mm. Prema tabeli redosled je 5,2, 4,3, 1.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q240.png"
   },
   {
     "id": 241,
@@ -4350,8 +4425,9 @@
     "opcije": [],
     "tacan_odgovor": "Crtanje zaklonjenih kontura i ivica - 3; Osne linije, simetrale i putanje - 4; Konture i nezaklonjene ivice - 1; Kotne i pomocne linije, pokazne linije, linije srafure i konture zaokrenutih preseka - 2",
     "objasnjenje": "Isprekidana tanka linija se koristi za zaklonjene konture, crta-tacka-crta za ose i simetrale, puna debela za vidljive konture, a puna tanka za kotne, pomocne, pokazne i srafurne linije.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q241.png"
   },
   {
     "id": 242,
@@ -4363,8 +4439,9 @@
     "opcije": [],
     "tacan_odgovor": "Zener dioda - 2; LE dioda - 3; Fotodioda - 1",
     "objasnjenje": "Zener dioda ima prelomljenu katodu, LED ima strelice koje izlaze iz diode, a fotodioda strelice koje padaju ka diodi.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q242.png"
   },
   {
     "id": 243,
@@ -4376,8 +4453,9 @@
     "opcije": [],
     "tacan_odgovor": "Fototranzistor - 3; NPN tranzistor - 1; PNP tranzistor - 2",
     "objasnjenje": "Fototranzistor je oznacen svetlosnim strelicama. Kod bipolarnih tranzistora NPN ima strelicu emitera koja ide napolje, dok PNP ima strelicu ka unutra.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q243.png"
   },
   {
     "id": 244,
@@ -4389,8 +4467,9 @@
     "opcije": [],
     "tacan_odgovor": "DC napajanje - 2; Baterija - 1; AC napajanje - 3",
     "objasnjenje": "Simbol sa + i - prikljuccima predstavlja DC napajanje, simbol sa dve razlicite ploce je baterija, a simbol sa talasom (~) predstavlja AC napajanje.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q244.png"
   },
   {
     "id": 245,
@@ -4441,8 +4520,9 @@
     "opcije": [],
     "tacan_odgovor": "Izvor naizmenicnog napona - X; Baterija - 1; Potenciometar - 2; Fotodioda - X; LE dioda - 5; Uzemljenje - 3; Otpornik - 4",
     "objasnjenje": "Na semi su prikazani baterija, potenciometar, uzemljenje, otpornik i LED. Nema izvora naizmenicnog napona niti fotodiode, pa se za njih upisuje X.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q248.png"
   },
   {
     "id": 249,
@@ -4461,8 +4541,9 @@
     ],
     "tacan_odgovor": "E2 - 3; E3 - X; E4 - 4; E6 - 5",
     "objasnjenje": "Cena u redu dobija se mnozenjem kolicine i cene po komadu, pa je E2 = C2*D2, a E4 = C4*D4. Za E3 nije ponudjena formula C3*D3, dok je u E6 zbir E2:E4.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q249.png"
   },
   {
     "id": 250,
@@ -4479,8 +4560,9 @@
     ],
     "tacan_odgovor": "SUM(ABOVE) - 2; SUM(LEFT) - 3; SUM(BELOW) - 4; SUM(RIGHT) - 1",
     "objasnjenje": "Iznad oznacene celije su tri trojke, pa je SUM(ABOVE)=9. Levo su tri jedinice, ispod tri cetvorke, a desno tri dvojke.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q250.png"
   },
   {
     "id": 251,
@@ -4492,7 +4574,8 @@
     "opcije": [],
     "tacan_odgovor": "Insertovati snimljenu sliku u Word dokument - 7; Startovati program Paint - 2; Selektovati deo slike u Paint-u - 4; Pritisnuti CTRL+V na tastaturi - 3; Crop selektovanog dela slike u Paint-u - 5; Print screen nacrtanog modela sistema sa mikroracunarom - 1; Snimiti obradjenu sliku u Paint-u - 6",
     "objasnjenje": "Redosled je: prvo napraviti Print Screen, otvoriti Paint, nalepiti sliku, selektovati potreban deo, crop-ovati, snimiti obradjenu sliku i zatim je umetnuti u Word dokument.",
-    "has_image": false,
-    "ai_generated": true
+    "has_image": true,
+    "ai_generated": true,
+    "image": "assets/question-images/q251.png"
   }
 ]

@@ -3,67 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maturski 2026 — Elektrotehničar računara</title>
+  <title>Minke Prep — Elektrotehničar računara</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-title">
-        <h1>Maturski 2026</h1>
-        <span class="header-sub">Elektrotehničar računara</span>
-      </div>
-      <div class="header-progress">
-        <div class="progress-label">
-          <span id="progress-text">Naučeno: 0/251</span>
-          <span id="progress-pct">0%</span>
-        </div>
-        <div class="progress-bar-outer">
-          <div class="progress-bar-inner" id="progress-bar"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <main class="main">
     <section class="home-panel" aria-label="Pregled napretka">
       <div class="home-copy">
-        <p class="eyebrow">Maturska priprema</p>
-        <h2 id="view-title">Početna</h2>
-        <p id="view-subtitle">Pregled napretka kroz sva pitanja.</p>
-        <div class="hero-actions">
-          <span class="hero-pill"><span id="stat-total">251</span> pitanja</span>
-          <span class="hero-pill"><span id="stat-known">0</span> naučeno</span>
-          <span class="hero-pill"><span id="stat-unknown">0</span> za vežbu</span>
-          <span class="hero-pill"><span id="stat-left">251</span> novo</span>
+        <img class="hero-logo" src="assets/logo.png" alt="Minke Prep" />
+        <p class="welcome-sup">Welcome back to</p>
+        <h2 class="home-heading">Minke <span class="home-accent">Prep</span></h2>
+        <p class="home-date" id="home-date"></p>
+        <div class="hero-stats">
+          <span class="hero-stat"><span id="stat-known">0</span><small>naučeno</small></span>
+          <span class="hero-stat-div"></span>
+          <span class="hero-stat"><span id="stat-unknown">0</span><small>za vežbu</small></span>
+          <span class="hero-stat-div"></span>
+          <span class="hero-stat"><span id="stat-left">251</span><small>novo</small></span>
         </div>
-        <button class="btn-exam-start" id="btn-exam-start" type="button">Maturski mod</button>
+        <div class="home-actions">
+          <button class="btn-exam-start" id="btn-exam-start" type="button">Maturski mod</button>
+          <button class="btn-continue" id="btn-continue" type="button" hidden>Nastavi</button>
+        </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <svg class="hero-svg" viewBox="0 0 220 180" role="img">
+        <svg class="hero-progress-ring" viewBox="0 0 140 140" aria-hidden="true">
+          <circle cx="70" cy="70" r="54" fill="none" stroke="rgba(101,184,255,0.1)" stroke-width="12"/>
+          <circle id="hero-ring" cx="70" cy="70" r="54" fill="none" stroke="url(#heroRingGrad)" stroke-width="12"
+            stroke-linecap="round" pathLength="100" stroke-dasharray="0 100"
+            transform="rotate(-90 70 70)" style="transition:stroke-dasharray 0.7s ease"/>
           <defs>
-            <linearGradient id="heroGrad" x1="20" y1="10" x2="190" y2="170" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#7CC7FF"/>
-              <stop offset="0.55" stop-color="#9A8CFF"/>
-              <stop offset="1" stop-color="#62E0A8"/>
+            <linearGradient id="heroRingGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#65b8ff"/>
+              <stop offset="1" stop-color="#9a7fff"/>
             </linearGradient>
-            <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="8" result="blur"/>
-              <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.4 0 0 0 0 0.75 0 0 0 0 1 0 0 0 .45 0"/>
-              <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
           </defs>
-          <path d="M34 142c20 18 70 25 112 12 42-12 64-43 49-82C181 34 137 16 91 25 45 35 9 65 15 102c2 15 8 29 19 40Z" fill="rgba(124,199,255,.10)"/>
-          <circle cx="68" cy="65" r="28" fill="rgba(124,199,255,.14)" stroke="rgba(124,199,255,.38)"/>
-          <path d="M54 62h29M54 72h20M54 52h17" stroke="#BFE7FF" stroke-width="5" stroke-linecap="round"/>
-          <rect x="102" y="45" width="68" height="90" rx="16" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)"/>
-          <path d="M119 70h33M119 88h24M119 106h38" stroke="#D8E6FF" stroke-width="6" stroke-linecap="round"/>
-          <circle cx="162" cy="126" r="28" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="12"/>
-          <circle id="hero-ring" cx="162" cy="126" r="28" fill="none" stroke="url(#heroGrad)" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100" filter="url(#softGlow)" transform="rotate(-90 162 126)"/>
-          <path d="M155 125l6 6 13-17" fill="none" stroke="#CFFFE8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="70" y="70" text-anchor="middle" dominant-baseline="central" fill="#e8f2ff" font-size="26" font-weight="800" font-family="Manrope,sans-serif" id="hero-ring-pct">0%</text>
         </svg>
       </div>
     </section>
@@ -127,6 +106,7 @@
           </select>
         </div>
         <button class="btn-reset" id="btn-reset">Resetuj filtere</button>
+        <button class="btn-shuffle-mode" id="btn-shuffle-mode" type="button">⇄ Shuffle</button>
         <button class="btn-test-mode" id="btn-test-mode"><span class="test-dot"></span> Test mod</button>
       </div>
       <div class="results-count" id="results-count"></div>
@@ -143,7 +123,7 @@
 
   <div class="modal-backdrop" id="exam-confirm" hidden>
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="exam-confirm-title">
-      <p class="eyebrow">Maturski mod</p>
+      <p class="eyebrow">Minke Prep · Ispit</p>
       <h2 id="exam-confirm-title">Započni simulaciju testa?</h2>
       <p>Biće izvučeno 50 nasumičnih pitanja sa ukupno 100 bodova. Tokom testa se ne prikazuju tačni odgovori ni objašnjenja.</p>
       <div class="modal-actions">
@@ -151,6 +131,18 @@
         <button class="btn-test-mode" id="btn-exam-confirm" type="button">Započni test</button>
       </div>
     </section>
+  </div>
+
+  <div class="image-lightbox" id="image-lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Zatvori sliku">×</button>
+    <div class="lightbox-stage" id="lightbox-stage">
+      <img id="lightbox-img" alt="" />
+    </div>
+    <div class="lightbox-tools">
+      <button type="button" id="lightbox-zoom-out">−</button>
+      <button type="button" id="lightbox-reset">100%</button>
+      <button type="button" id="lightbox-zoom-in">+</button>
+    </div>
   </div>
 
   <nav class="bottom-nav" id="bottom-nav" aria-label="Navigacija po predmetima">
@@ -191,6 +183,7 @@
     </button>
   </nav>
 
+  <div id="milestone-toast" class="milestone-toast" hidden aria-live="polite"></div>
   <script src="app.js"></script>
 </body>
 </html>
